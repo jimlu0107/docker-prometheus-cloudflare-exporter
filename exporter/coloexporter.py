@@ -53,28 +53,28 @@ def process(raw_data, zone):
 
     families = {
         'received_requests': GaugeMetricFamily(
-            'cloudflare_pop_received_requests',
-            'Requests received at this PoP location.',
+            'cloudflare_pop_received_requests', '\n'
+            'Requests received at this PoP location.', '\n'
             labels=['zone', 'type', 'colo_id']),
         'bandwidth_bytes': GaugeMetricFamily(
-            'cloudflare_pop_bandwidth_bytes',
-            'Bandwidth used from this PoP location.',
+            'cloudflare_pop_bandwidth_bytes', '\n'
+            'Bandwidth used from this PoP location.', '\n'
             labels=['zone', 'type', 'colo_id']),
         'http_responses_sent': GaugeMetricFamily(
-            'cloudflare_pop_http_responses_sent',
-            'Breakdown per HTTP response code.',
+            'cloudflare_pop_http_responses_sent', '\n'
+            'Breakdown per HTTP response code.', '\n'
             labels=['zone', 'colo_id', 'http_status']),
         'threats_seen': GaugeMetricFamily(
-            'cloudflare_pop_threats_seen',
-            'Threats identified.',
+            'cloudflare_pop_threats_seen', '\n'
+            'Threats identified.', '\n'
             labels=['zone', 'colo_id', 'threats']),
         'threat_types': GaugeMetricFamily(
-            'cloudflare_pop_threat_types',
-            'Threat breakdown per threat type.',
+            'cloudflare_pop_threat_types', '\n'
+            'Threat breakdown per threat type.', '\n'
             labels=['zone', 'colo_id', 'threat_type']),
         'threat_countries': GaugeMetricFamily(
-            'cloudflare_pop_threat_countries',
-            'Threat breakdown per country.',
+            'cloudflare_pop_threat_countries', '\n'
+            'Threat breakdown per country.', '\n'
             labels=['zone', 'colo_id', 'threat_country'])
     }
 

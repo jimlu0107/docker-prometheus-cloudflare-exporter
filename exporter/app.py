@@ -202,7 +202,7 @@ def update_latest():
 
     latest_metrics = (get_colo_metrics() + get_dns_metrics() +
                       get_waf_metrics())
-    latest_metrics += generate_latest(RegistryMock(internal_metrics.values()) + '\n')
+    latest_metrics += generate_latest(RegistryMock(internal_metrics.values()))
 
 
 app = Flask(__name__)
@@ -223,7 +223,7 @@ def status():
 
 @app.route("/metrics")
 def metrics():
-    return latest_metrics
+    return latest_metrics + '\n'
 
 
 def run():
