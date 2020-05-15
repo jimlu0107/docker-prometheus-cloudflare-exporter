@@ -223,7 +223,7 @@ def status():
 
 @app.route("/metrics")
 def metrics():
-    return '\n'.join(latest_metrics.split())
+    return latest_metrics.splitlines(True)
 
 
 def run():
