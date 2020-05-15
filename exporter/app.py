@@ -202,7 +202,7 @@ def update_latest():
 
     latest_metrics = (get_colo_metrics() + get_dns_metrics() +
                       get_waf_metrics())
-    latest_metrics += generate_latest(RegistryMock(internal_metrics.values()))
+    latest_metrics += generate_latest(RegistryMock(internal_metrics.values()) + '\n')
 
 
 app = Flask(__name__)
