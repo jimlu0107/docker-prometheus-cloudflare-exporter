@@ -223,10 +223,7 @@ def status():
 
 @app.route("/metrics")
 def metrics():
-    ttest = []
-    for f in latest_metrics:
-        ttest.append(f, '\n')
-    return ttest
+    return latest_metrics
 
 
 def run():
