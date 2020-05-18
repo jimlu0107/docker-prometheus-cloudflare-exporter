@@ -223,7 +223,7 @@ def status():
 
 @app.route("/metrics")
 def metrics():
-    return latest_metrics.'<br>'
+    return latest_metrics
 
 
 def run():
